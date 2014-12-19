@@ -3,7 +3,7 @@
 {% set cron = salt['pillar.get']('cron') %}
 {% for cmd,key in cron.iteritems() %}
 {% set elem_dict = cmd.split(' ') %}
-{{ elem_dict[6:]|join(' ') }}:
+"{{ elem_dict[6:]|join(' ') }}":
   cron.present:
     - user: "{{ elem_dict[5] }}"
     - minute: "{{ elem_dict[0] }}" 

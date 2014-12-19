@@ -12,4 +12,5 @@
     - month: "{{ elem_dict[3] }}"
     - dayweek: "{{ elem_dict[4] }}"
     - comment: "{{ key }}"
+    - identifier: " "
 {% endfor %}
